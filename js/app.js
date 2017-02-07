@@ -1,6 +1,7 @@
 window.onload = (function(win) {
 
     var isSwiper = true
+    var star = 10
 
     //执行加载
     loading()
@@ -70,12 +71,14 @@ window.onload = (function(win) {
           var str = $(this).html()
           search(str)
           $('.return').show()
+          $('body').css('overflow', 'auto')
         })
 
         //搜索icon点击事件
         $('#search-icon').on('click',function(){
           var str = $(this).siblings().children().eq(0).val()
           search(str)
+          $('body').css('overflow', 'auto')
         })
 
     }
@@ -120,23 +123,30 @@ window.onload = (function(win) {
             var windowHeight = $(this).height();
             var isProjectShow = $('.project-show').css('display');
             if (scrollTop + windowHeight == scrollHeight&&isProjectShow =='none') {
-              loadCase()
+              loadAnthorCase()
             }
         });
     }
 
     //加载案例
-    function loadCase(){
-      setTimeout(function(){
-        $('.loading').css('display','none')
-        createCase()
-      },1000)
-      $('.loading').css('display','block')
+    function loadAnthorCase(){
+      $('.loading').show()
+      console.log(star)
+      var submitData = {
+            star:star
+        };
+        $.post('http://t6.miaoxing101.com//index.php?s=/home/index/ajaxanli', submitData,
+        function(data) {
+          createCase(data)
+          star = star + 10
+          setTimeout(function(){
+            $('.loading').hide()
+          },1000)
+        },"json")
     }
 
     //生成案例
     function createCase(data){
-      console.log(data)
       var title = ''
       var view = ''
       var src = ''
@@ -170,6 +180,7 @@ window.onload = (function(win) {
     }
 
     function doProjectAjax(id){
+      $('.loading').show()
       var submitData = {
             id:id
         };
@@ -182,7 +193,6 @@ window.onload = (function(win) {
     //生成案例详情页
     function Partculars(data){
 
-      console.log(data.detail)
 
       var urlStr1 = 'url(http://t6.miaoxing101.com'+data.detail.imgpath[0]+')'
       var urlStr2 = 'url(http://t6.miaoxing101.com'+data.detail.imgpath[1]+')'
@@ -194,7 +204,7 @@ window.onload = (function(win) {
       $('.portion2').css('background',urlStr2)
       $('.portion3').css('background',urlStr3)
 
-
+      $('.loading').hide()
 
       $('.warpper').css('display', 'none')
       $('.project-show').css('display', 'block')
@@ -214,6 +224,10 @@ window.onload = (function(win) {
       setTimeout(function(){
         $('.loading').hide()
       },1000)
+    }
+
+    function loadimg(imgData){
+
     }
 
 })(window)
