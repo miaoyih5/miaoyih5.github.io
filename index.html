@@ -47,12 +47,12 @@
         </nav>
         <div class='search-panel'>
             <div class="search-box">
-                <div class='icon'></div>
+                <div id='search-icon' class='icon'></div>
                 <div class="text">
                     <input type="text">
                 </div><span class='cancel'>取消</span>
             </div>
-            <div class="word-box">
+            <div id='word-box' class="word-box">
                 <h2 style='margin-left: 0.35rem;font-size: 0.35rem;'>热词</h2>
                 <ul>
                     <li>新年</li>
@@ -80,8 +80,11 @@
         </div>
     </section>
     <section class='project-show'>
+        <div class='return'>
+          返回<br>首页
+        </div>
         <div class='top'>
-            <p class='title'>喵星案例：安踏雄狮在怒吼</p>
+            <p class='title' id="project-title">喵星案例：安踏雄狮在怒吼</p>
             <div class='nav'>
                 <div class='keyword'>
                     <span><img src="img/biezhen.png" alt=""></span>
@@ -91,7 +94,7 @@
                 </div>
                 <div class='rate'>
                     <div class='icon'></div>
-                    <div class='number'>100</div>
+                    <div class='number' id='project-view'>100</div>
                 </div>
             </div>
         </div>
@@ -99,17 +102,17 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide portion1">
-                        <div class='portion'>
+                        <div class='portion' id='portion1-img'>
                             <!-- <img src="img/show1.jpg" alt=""> -->
                         </div>
                     </div>
                     <div class="swiper-slide portion2">
-                        <div class='portion'>
+                        <div class='portion' id='portion2-img'>
                             <!-- <img src="img/show2.jpg" alt=""> -->
                         </div>
                     </div>
                     <div class="swiper-slide portion3">
-                        <div class='portion'>
+                        <div class='portion' id='portion3-img'>
                             <!-- <img src="img/show3.jpg" alt=""> -->
                         </div>
                     </div>

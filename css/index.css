@@ -10,6 +10,7 @@ html {
 body{
   width:100%;
   max-height:999999px;
+  font-size:0.3rem;
 }
 
 img {
@@ -523,6 +524,36 @@ a{
   background:url(../img/show3.jpg) no-repeat;
   background-size:100% 100%;
 }
+
+.project-show .return{
+  width:1rem;
+  height:1rem;
+  z-index:99999;
+  position:fixed;
+  right:0.5rem;
+  bottom:0.5rem;
+  border:2px solid #03a6ff;
+  border-radius:0.5rem;
+  text-align:center;
+  line-height:0.35rem;
+  padding-top:0.12rem;
+  color:#fff;
+  background:#03a6ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .consult{
   width:7.5rem;
