@@ -69,6 +69,8 @@
             </div>
         </div>
     </header>
+
+
     <section class="warpper">
         <div class="top">
             <p class='font'>汇聚全网优质H5案例</p>
@@ -81,7 +83,7 @@
     </section>
     <section class='project-show'>
         <div class='return'>
-          返回<br>首页
+          <img src="img/home.png" alt="">
         </div>
         <div class='top'>
             <p class='title' id="project-title">喵星案例：安踏雄狮在怒吼</p>
@@ -118,12 +120,12 @@
                     </div>
                 </div>
             </div>
-            <a class='button button1' href=""></a>
+            <a id="h5-url" class='button button1' href=""></a>
             <p class="button button2" href=""></p>
         </div>
         <div class='message'>
             <p class='description-title'>作品描述</p>
-            <p class='description'>快来一探究竟</p>
+            <p id='description' class='description'>快来一探究竟</p>
         </div>
         <div class='bottom'>
             <p style='padding-top:0.5rem;'>获取行业最新资讯</p>
@@ -133,6 +135,9 @@
             <p>汇聚全网优质H5案例</p>
         </div>
     </section>
+
+
+
     <section class='consult'>
         <div class="container">
             <div class='top'>
@@ -142,14 +147,14 @@
             </div>
             <div class='name in'>
                 <div class='icon'></div>
-                <input type="text" placeholder="请输入您的姓名">
+                <input id='name' type="text" placeholder="请输入您的姓名">
             </div>
             <div class='phone in'>
                 <div class="icon"></div>
-                <input type="text" placeholder='请输入您的手机号码'>
+                <input id='phoneNumber' type="text" placeholder='请输入您的手机号码'>
             </div>
-            <textarea name="" placeholder="请输入您的制作需求"></textarea>
-            <p class='btn-submit'>提交</p>
+            <textarea id='need' name="" placeholder="请输入您的制作需求"></textarea>
+            <p class='btn-submit' id='btn-submit'>提交</p>
             <div class="bottom">
                 <div class="left">
                     <p>
@@ -170,6 +175,7 @@
             </div>
         </div>
     </section>
+
     <script src='js/jquery.min.js'></script>
     <script src='js/fastclick.js'></script>
     <script src='js/hammer.js'></script>

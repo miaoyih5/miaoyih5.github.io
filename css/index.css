@@ -368,7 +368,7 @@ a{
 .project-show .top{
   width:100%;
   height:1.5rem;
-  margin-top:1.5rem;
+  margin-top:1.2rem;
   font-size:0.3rem;
 }
 
@@ -421,22 +421,22 @@ a{
 
 .project-show .show{
   width:100%;
-  height:7.5rem;
+  height:8.5rem;
   background:#f6f8fc;
   position:relative;
-  margin-top:0.8rem;
+  margin-top:0.3rem;
 }
 
 .project-show .swiper-container{
   width:12rem;
-  height:6rem;
+  height:7rem;
   position:absolute;
-  top:0.2rem;
+  top:0.1rem;
   left:-2.3rem;
 }
 
 .project-show .swiper-wrapper{
-  margin-top:0.4rem;
+  margin-top:0.1rem;
 }
 
 .project-show .button{
@@ -444,7 +444,7 @@ a{
   float:left;
   width:3rem;
   height:0.8rem;
-  margin-top:6.5rem;
+  margin-top:7.5rem;
   margin-left:0.5rem;
 }
 
@@ -539,6 +539,10 @@ a{
   padding-top:0.12rem;
   color:#fff;
   background:#03a6ff;
+}
+
+.project-show .return img{
+  margin-top:-0.15rem;
 }
 
 
